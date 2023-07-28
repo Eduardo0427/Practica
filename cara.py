@@ -37,7 +37,7 @@ while True:
     #pupilas
     pygame.draw.circle(surface, black, (150, 200), 20)
     pygame.draw.circle(surface, black, (250, 200), 20)
-    # sonrrisa
+    # boca
     pygame.draw.line(surface, black, (300, 360), (40, 360), 20)
     
     
