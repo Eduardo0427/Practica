@@ -42,7 +42,3 @@ while True:
     
     
     pygame.display.update()
-    
-            
-# https://admision.usmp.edu.pe/examenSimulacro/simulacroOrdinario.html
-# simulacro de examen de admicion
