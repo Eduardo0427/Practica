@@ -9,7 +9,7 @@ pygame.init()
 width: int = 500
 height: int = 800
 surface: pygame.Surface = pygame.display.set_mode( (width, height), pygame.RESIZABLE )
-title: None = pygame.display.set_caption("Este es el titulo")
+title:None = pygame.display.set_caption("Este es el titulo")
 # Colores
 red: Tuple[int, int, int] = (255, 0, 0)
 green: Tuple[int, int, int] = (0, 255, 0)
@@ -24,10 +24,6 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
-            
-        elif event.type == pygame.VIDEORESIZE:
-            width, height = event.w, event.h
-            surface = pygame.display.set_mode((width, height), pygame.RESIZABLE)
             
     surface.fill(black)
     
