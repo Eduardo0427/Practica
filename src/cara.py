@@ -1,22 +1,23 @@
 import pygame
 import sys
+from typing import Tuple
 
 #iniciar pygame
 pygame.init()
 
 # Pantalla de la aplicacion
-width = 500
-height = 800
-surface = pygame.display.set_mode( (width, height) )
+width: int = 500
+height: int = 800
+surface: pygame.Surface = pygame.display.set_mode( (width, height), pygame.RESIZABLE )
 title = pygame.display.set_caption("Este es el titulo")
-
 # Colores
-red = (255, 0, 0)
-green = (0, 255, 0)
-yellow = (255, 255, 0)
-blue = (0, 0, 255)
-black = (0, 0, 0)
-white = (255, 255, 255)
+red: Tuple[int, int, int] = (255, 0, 0)
+green: Tuple[int, int, int] = (0, 255, 0)
+yellow: Tuple[int, int, int] = (255, 255, 0)
+blue: Tuple[int, int, int] = (0, 0, 255)
+black: Tuple[int, int, int] = (0, 0, 0)
+white: Tuple[int, int, int] = (255, 255, 255)
+
 
 while True:
     for event in pygame.event.get():
@@ -24,6 +25,9 @@ while True:
             pygame.quit()
             sys.exit()
             
+        elif event.type == pygame.VIDEORESIZE:
+            width, height = event.w, event.h
+            surface = pygame.display.set_mode((width, height), pygame.RESIZABLE)
             
     surface.fill(black)
     
